@@ -1,12 +1,12 @@
 import * as Actions from './constants';
 
+const getImages = images => ({
+    type: Actions.LOAD_IMAGES,
+});
+
 const setImages = images => ({
     type: Actions.LOAD_IMAGES_SUCCESS,
     payload: images,
-});
-
-const setLoading = () => ({
-    type: Actions.LOAD_IMAGES,
 });
 
 const setError = error => ({
@@ -14,4 +14,4 @@ const setError = error => ({
     payload: error,
 });
 
-export { setImages, setLoading, setError };
+export { getImages, setImages, setError };
